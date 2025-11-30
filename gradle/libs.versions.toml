@@ -87,7 +87,7 @@ toaster = "13.2"
 
 # 权限
 # XXPermissions 权限框架: https://github.com/getActivity/XXPermissions
-xxpermissions = "26.5"
+xxpermissions = "28.0"
 
 # 数据存储
 # 腾讯 MMKV 高性能存储: https://github.com/Tencent/MMKV
