@@ -11,11 +11,11 @@ import javax.inject.Qualifier
 import javax.inject.Singleton
 
 /**
- * 用户状态模块，提供 UserState 所需的应用级协程作用域
+ * 应用状态模块，提供应用级协程作用域
  */
 @Module
 @InstallIn(SingletonComponent::class)
-object UserStateModule {
+object AppStateModule {
 
     /**
      * 提供应用级别的协程作用域
