@@ -6,6 +6,8 @@ import com.joker.kit.navigation.routes.UserRoutes
 
 /**
  * Demo 卡片静态数据源
+ *
+ * @author Joker.X
  */
 object DemoCardData {
 

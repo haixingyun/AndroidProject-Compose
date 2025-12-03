@@ -18,6 +18,7 @@ import com.joker.kit.feature.main.model.DemoCardInfo
  * @param info 卡片数据
  * @param modifier 修饰符
  * @param onClick 点击回调
+ * @author Joker.X
  */
 @Composable
 fun DemoCard(
@@ -51,7 +52,8 @@ private fun DemoCardPreview() {
         DemoCard(
             info = DemoCardInfo(
                 title = "示例组件",
-                description = "预览展示 Demo 卡片默认样式。"
+                description = "预览展示 Demo 卡片默认样式。",
+                route = null
             )
         )
     }

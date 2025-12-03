@@ -1,5 +1,7 @@
 package com.joker.kit.core.network.service
 
+import androidx.annotation.Keep
+
 import com.joker.kit.core.model.entity.User
 import com.joker.kit.core.model.network.NetworkResponse
 import retrofit2.http.GET
@@ -9,6 +11,7 @@ import retrofit2.http.GET
  *
  * @author Joker.X
  */
+@Keep
 interface UserInfoService {
 
     /**

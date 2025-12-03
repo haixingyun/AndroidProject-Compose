@@ -30,6 +30,9 @@ class MainViewModel @Inject constructor(
 
     /**
      * 切换底部导航 tab
+     *
+     * @param tab 目标 Tab
+     * @author Joker.X
      */
     fun selectTab(tab: MainTab) {
         if (tab == _uiState.value.currentTab) return
@@ -41,6 +44,7 @@ class MainViewModel @Inject constructor(
  * Main 页面 UI 状态
  *
  * @param currentTab 当前底部栏 tab
+ * @author Joker.X
  */
 data class MainUiState(
     val currentTab: MainTab = MainTab.Core
@@ -48,6 +52,9 @@ data class MainUiState(
 
 /**
  * Main 页面底部栏 Tab
+ *
+ * @param title Tab 标题
+ * @author Joker.X
  */
 enum class MainTab(val title: String) {
     Core("Core"),
@@ -58,6 +65,13 @@ enum class MainTab(val title: String) {
     companion object {
         val allTabs: List<MainTab> = values().toList()
 
+        /**
+         * 根据索引获取 Tab
+         *
+         * @param index 底部栏索引
+         * @return 对应的 Tab，超出范围返回 Core
+         * @author Joker.X
+         */
         fun fromIndex(index: Int): MainTab {
             return allTabs.getOrElse(index) { Core }
         }

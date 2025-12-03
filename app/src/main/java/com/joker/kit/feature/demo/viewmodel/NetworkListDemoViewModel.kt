@@ -18,6 +18,7 @@ import javax.inject.Inject
  * @param navigator 导航器
  * @param userState 用户状态管理
  * @param goodsRepository 商品数据仓库
+ * @author Joker.X
  */
 @HiltViewModel
 class NetworkListDemoViewModel @Inject constructor(
@@ -35,6 +36,9 @@ class NetworkListDemoViewModel @Inject constructor(
 
     /**
      * 重写请求API Flow，获取商品列表
+     *
+     * @return 商品分页数据流
+     * @author Joker.X
      */
     override fun requestListData(): Flow<NetworkResponse<NetworkPageData<Goods>>> {
         return goodsRepository.getGoodsPage(

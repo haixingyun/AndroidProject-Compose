@@ -14,6 +14,10 @@ import javax.inject.Inject
 
 /**
  * Navigation Demo ViewModel
+ *
+ * @param navigator 导航管理器
+ * @param userState 用户状态
+ * @author Joker.X
  */
 @HiltViewModel
 class NavigationDemoViewModel @Inject constructor(
@@ -27,16 +31,33 @@ class NavigationDemoViewModel @Inject constructor(
     private val _cards = MutableStateFlow(DemoCardData.navigationCards)
     val cards: StateFlow<List<DemoCardInfo>> = _cards.asStateFlow()
 
-    /** 全局登录状态 */
+    /**
+     * 全局登录状态
+     *
+     * @return 登录状态流
+     * @author Joker.X
+     */
     val isLoggedIn: StateFlow<Boolean> = userState.isLoggedIn
 
     private val _demoResult = MutableStateFlow<DemoResult?>(null)
     val demoResult: StateFlow<DemoResult?> = _demoResult.asStateFlow()
 
+    /**
+     * 处理卡片点击
+     *
+     * @param info 卡片信息
+     * @author Joker.X
+     */
     fun onCardClick(info: DemoCardInfo) {
         info.route?.let { navigate(it) }
     }
 
+    /**
+     * 处理回传结果
+     *
+     * @param result 回传结果
+     * @author Joker.X
+     */
     fun onResultReceived(result: DemoResult) {
         _demoResult.value = result
     }

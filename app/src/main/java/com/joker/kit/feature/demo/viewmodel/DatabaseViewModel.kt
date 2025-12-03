@@ -21,6 +21,7 @@ import javax.inject.Inject
  * @param navigator 导航管理器
  * @param userState 用户状态管理
  * @param demoRepository Demo 仓库，封装 DemoDataSource 的增删改查
+ * @author Joker.X
  */
 @HiltViewModel
 class DatabaseViewModel @Inject constructor(
@@ -40,6 +41,9 @@ class DatabaseViewModel @Inject constructor(
     /**
      * Demo 表数据流
      * UI 侧直接 collectAsState() 获取最新列表
+     *
+     * @return Demo 列表状态流
+     * @author Joker.X
      */
     val items: StateFlow<List<DemoEntity>> = demoRepository
         .observeItems()
@@ -53,6 +57,7 @@ class DatabaseViewModel @Inject constructor(
      * 更新标题输入
      *
      * @param value 文本框中的标题
+     * @author Joker.X
      */
     fun onTitleChange(value: String) {
         _title.value = value
@@ -62,6 +67,7 @@ class DatabaseViewModel @Inject constructor(
      * 更新描述输入
      *
      * @param value 文本框中的描述
+     * @author Joker.X
      */
     fun onDescriptionChange(value: String) {
         _description.value = value
@@ -69,6 +75,8 @@ class DatabaseViewModel @Inject constructor(
 
     /**
      * 新增一条记录（仅当标题非空）
+     *
+     * @author Joker.X
      */
     fun addItem() {
         val title = _title.value.trim()
@@ -88,6 +96,7 @@ class DatabaseViewModel @Inject constructor(
      * 删除指定记录
      *
      * @param id 记录主键
+     * @author Joker.X
      */
     fun deleteItem(id: Long) {
         viewModelScope.launch {
@@ -97,6 +106,8 @@ class DatabaseViewModel @Inject constructor(
 
     /**
      * 清空全部记录
+     *
+     * @author Joker.X
      */
     fun clearAll() {
         viewModelScope.launch {

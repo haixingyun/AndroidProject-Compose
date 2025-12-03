@@ -10,6 +10,10 @@ import javax.inject.Inject
 
 /**
  * 结果回传示例页 ViewModel
+ *
+ * @param navigator 导航管理器
+ * @param userState 用户状态
+ * @author Joker.X
  */
 @HiltViewModel
 class NavigationResultViewModel @Inject constructor(
@@ -19,6 +23,11 @@ class NavigationResultViewModel @Inject constructor(
     navigator = navigator,
     userState = userState
 ) {
+    /**
+     * 回传结果并返回上一页
+     *
+     * @author Joker.X
+     */
     fun sendResultAndBack() {
         popBackStackWithResult(
             DemoResultKey,

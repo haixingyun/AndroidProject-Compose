@@ -33,6 +33,8 @@ import com.joker.kit.navigation.results.DemoResultKey
  * Navigation Demo 路由
  *
  * @param viewModel Navigation Demo ViewModel
+ * @param navController 用于监听结果的 NavController
+ * @author Joker.X
  */
 @Composable
 internal fun NavigationDemoRoute(
@@ -60,6 +62,9 @@ internal fun NavigationDemoRoute(
  *
  * @param cards Demo 卡片列表
  * @param isLoggedIn 是否已登录，登录后展示提示
+ * @param demoResult 回传结果
+ * @param onCardClick 卡片点击回调
+ * @author Joker.X
  */
 @Composable
 internal fun NavigationDemoScreen(
@@ -96,7 +101,9 @@ internal fun NavigationDemoScreen(
 
 /**
  * 登录状态提示卡片
- * */
+ *
+ * @author Joker.X
+ */
 @Composable
 private fun LoginStatusBanner() {
     Card(modifier = Modifier.fillMaxWidth()) {
@@ -107,7 +114,12 @@ private fun LoginStatusBanner() {
     }
 }
 
-/** 回传结果提示卡片 */
+/**
+ * 回传结果提示卡片
+ *
+ * @param result 回传结果
+ * @author Joker.X
+ */
 @Composable
 private fun DemoResultBanner(result: DemoResult) {
     Card(modifier = Modifier.fillMaxWidth()) {
@@ -120,6 +132,8 @@ private fun DemoResultBanner(result: DemoResult) {
 
 /**
  * Navigation Demo 浅色预览
+ *
+ * @author Joker.X
  */
 @Preview(showBackground = true)
 @Composable
@@ -133,6 +147,8 @@ private fun NavigationDemoPreview() {
 
 /**
  * Navigation Demo 深色预览
+ *
+ * @author Joker.X
  */
 @Preview(showBackground = true)
 @Composable

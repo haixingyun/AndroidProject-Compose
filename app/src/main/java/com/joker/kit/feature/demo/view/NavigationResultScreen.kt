@@ -17,6 +17,9 @@ import com.joker.kit.feature.demo.viewmodel.NavigationResultViewModel
 
 /**
  * 结果回传示例路由
+ *
+ * @param viewModel Hilt 注入的 NavigationResultViewModel
+ * @author Joker.X
  */
 @Composable
 internal fun NavigationResultRoute(
@@ -31,7 +34,9 @@ internal fun NavigationResultRoute(
 /**
  * 结果回传示例界面
  *
+ * @param onSendResult 发送结果并返回回调
  * @param onBackClick 返回按钮回调
+ * @author Joker.X
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -49,6 +54,9 @@ internal fun NavigationResultScreen(
 
 /**
  * 结果回传内容视图
+ *
+ * @param onSendResult 发送结果回调
+ * @author Joker.X
  */
 @Composable
 private fun NavigationResultContent(onSendResult: () -> Unit) {
@@ -64,6 +72,8 @@ private fun NavigationResultContent(onSendResult: () -> Unit) {
 
 /**
  * 结果回传界面浅色主题预览
+ *
+ * @author Joker.X
  */
 @Preview(showBackground = true)
 @Composable
@@ -75,6 +85,8 @@ private fun NavigationResultPreview() {
 
 /**
  * 结果回传界面深色主题预览
+ *
+ * @author Joker.X
  */
 @Preview(showBackground = true)
 @Composable

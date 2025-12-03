@@ -11,6 +11,7 @@ import com.joker.kit.navigation.routes.MainRoutes
 /**
  * 注册主页面路由
  *
+ * @param navController NavHostController
  * @param sharedTransitionScope 共享转场作用域
  * @author Joker.X
  */

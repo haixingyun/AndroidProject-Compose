@@ -23,6 +23,9 @@ import com.joker.kit.feature.demo.viewmodel.NetworkListDemoViewModel
 
 /**
  * Network List Demo 路由
+ *
+ * @param viewModel Hilt 注入的 NetworkListDemoViewModel
+ * @author Joker.X
  */
 @Composable
 internal fun NetworkListDemoRoute(
@@ -62,6 +65,7 @@ internal fun NetworkListDemoRoute(
  * @param shouldTriggerLoadMore 是否触发加载更多
  * @param onBackClick 返回回调
  * @param onRetry 重试回调
+ * @author Joker.X
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -105,6 +109,7 @@ internal fun NetworkListDemoScreen(
  * @param onRefresh 刷新回调
  * @param onLoadMore 加载更多回调
  * @param shouldTriggerLoadMore 是否触发加载更多
+ * @author Joker.X
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -131,6 +136,9 @@ private fun NetworkListDemoContent(
 
 /**
  * 简单展示商品信息的列表项
+ *
+ * @param goods 商品实体
+ * @author Joker.X
  */
 @Composable
 private fun GoodsListItem(goods: Goods) {
@@ -146,6 +154,8 @@ private fun GoodsListItem(goods: Goods) {
 
 /**
  * Network List Demo 界面浅色主题预览
+ *
+ * @author Joker.X
  */
 @Preview(showBackground = true)
 @Composable
@@ -161,6 +171,8 @@ private fun NetworkListDemoPreview() {
 
 /**
  * Network List Demo 界面深色主题预览
+ *
+ * @author Joker.X
  */
 @Preview(showBackground = true)
 @Composable
@@ -176,6 +188,9 @@ private fun NetworkListDemoPreviewDark() {
 
 /**
  * 预览用商品列表数据
+ *
+ * @return 商品预览数据列表
+ * @author Joker.X
  */
 private fun previewGoodsList() = listOf(
     Goods(id = 1, title = "小米手机 14", subTitle = "直屏旗舰", price = 3999, sold = 5000),

@@ -42,6 +42,7 @@ import com.joker.kit.feature.demo.viewmodel.LocalStorageViewModel
  * 本地存储示例路由
  *
  * @param viewModel Hilt 注入的 LocalStorageViewModel
+ * @author Joker.X
  */
 @Composable
 internal fun LocalStorageRoute(
@@ -85,6 +86,7 @@ internal fun LocalStorageRoute(
  * @param onClearUser 清除用户信息
  * @param onReloadUser 重新读取用户信息
  * @param onBackClick 返回按钮回调
+ * @author Joker.X
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -104,7 +106,6 @@ internal fun LocalStorageScreen(
     AppScaffold(
         titleText = "本地存储",
         onBackClick = onBackClick,
-        contentShouldConsumePadding = true
     ) {
         LocalStorageContent(
             userId = userId,
@@ -134,6 +135,7 @@ internal fun LocalStorageScreen(
  * @param onSaveUser 保存用户
  * @param onClearUser 清除用户
  * @param onReloadUser 重新读取用户
+ * @author Joker.X
  */
 @Composable
 private fun LocalStorageContent(
@@ -183,6 +185,7 @@ private fun LocalStorageContent(
  * @param onSaveUser 保存用户
  * @param onClearUser 清除用户
  * @param onReloadUser 重新读取用户
+ * @author Joker.X
  */
 @Composable
 private fun UserCard(
@@ -269,6 +272,8 @@ private fun UserCard(
 
 /**
  * 本地存储界面浅色主题预览
+ *
+ * @author Joker.X
  */
 @Preview(showBackground = true)
 @Composable
@@ -285,6 +290,8 @@ private fun LocalStoragePreview() {
 
 /**
  * 本地存储界面深色主题预览
+ *
+ * @author Joker.X
  */
 @Preview(showBackground = true)
 @Composable

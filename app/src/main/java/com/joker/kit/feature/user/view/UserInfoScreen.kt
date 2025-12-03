@@ -37,6 +37,7 @@ internal fun UserInfoRoute(
  * 用户信息页面
  *
  * @param onBackClick 返回按钮回调
+ * @param onLogoutClick 退出登录回调
  * @author Joker.X
  */
 @OptIn(ExperimentalMaterial3Api::class)
@@ -60,6 +61,7 @@ internal fun UserInfoScreen(
  * 用户信息内容
  *
  * @param modifier 修饰符
+ * @param onLogoutClick 退出登录回调
  * @author Joker.X
  */
 @Composable

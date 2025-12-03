@@ -24,6 +24,9 @@ import com.joker.kit.feature.demo.viewmodel.NetworkRequestViewModel
 
 /**
  * 网络请求示例路由
+ *
+ * @param viewModel Hilt 注入的 NetworkRequestViewModel
+ * @author Joker.X
  */
 @Composable
 internal fun NetworkRequestRoute(
@@ -45,6 +48,7 @@ internal fun NetworkRequestRoute(
  * @param goods 商品信息
  * @param onBackClick 返回按钮回调
  * @param onRequestClick 请求按钮回调
+ * @author Joker.X
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -69,6 +73,7 @@ internal fun NetworkRequestScreen(
  *
  * @param goods 商品信息
  * @param onRequestClick 请求按钮回调
+ * @author Joker.X
  */
 @Composable
 private fun NetworkRequestContent(
@@ -99,6 +104,7 @@ private fun NetworkRequestContent(
  * 网络请求结果卡片视图
  *
  * @param goods 商品信息
+ * @author Joker.X
  */
 @Composable
 private fun CardResult(goods: Goods) {
@@ -116,6 +122,9 @@ private fun CardResult(goods: Goods) {
 
 /**
  * 模拟商品信息
+ *
+ * @return 示例商品
+ * @author Joker.X
  */
 private fun mockGoods() = Goods(
     id = 1,
@@ -128,6 +137,8 @@ private fun mockGoods() = Goods(
 
 /**
  * 网络请求界面浅色主题预览
+ *
+ * @author Joker.X
  */
 @Preview(showBackground = true)
 @Composable
@@ -141,6 +152,8 @@ private fun NetworkRequestPreview() {
 
 /**
  * 网络请求界面深色主题预览
+ *
+ * @author Joker.X
  */
 @Preview(showBackground = true)
 @Composable

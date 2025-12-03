@@ -23,12 +23,17 @@ class DemoCounterState @Inject constructor(
 
     /**
      * 计数器值
+     *
+     * @return 计数器 StateFlow
+     * @author Joker.X
      */
     private val _count = MutableStateFlow(0)
     val count: StateFlow<Int> = _count.asStateFlow()
 
     /**
      * +1
+     *
+     * @author Joker.X
      */
     fun increase() {
         appScope.launch {
@@ -38,6 +43,8 @@ class DemoCounterState @Inject constructor(
 
     /**
      * -1，最低为 0
+     *
+     * @author Joker.X
      */
     fun decrease() {
         appScope.launch {
@@ -47,6 +54,8 @@ class DemoCounterState @Inject constructor(
 
     /**
      * 重置
+     *
+     * @author Joker.X
      */
     fun reset() {
         appScope.launch {

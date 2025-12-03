@@ -12,6 +12,8 @@ import javax.inject.Singleton
 
 /**
  * 应用状态模块，提供应用级协程作用域
+ *
+ * @author Joker.X
  */
 @Module
 @InstallIn(SingletonComponent::class)
@@ -20,6 +22,9 @@ object AppStateModule {
     /**
      * 提供应用级别的协程作用域
      * SupervisorJob 确保子协程失败不会终止整个作用域
+     *
+     * @return 应用级 CoroutineScope
+     * @author Joker.X
      */
     @ApplicationScope
     @Singleton
@@ -31,6 +36,8 @@ object AppStateModule {
 
 /**
  * 应用级协程作用域限定符
+ *
+ * @author Joker.X
  */
 @Retention(AnnotationRetention.RUNTIME)
 @Qualifier

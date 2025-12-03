@@ -11,6 +11,9 @@ import com.joker.kit.feature.demo.viewmodel.NavigationWithArgsViewModel
 
 /**
  * 带参跳转示例路由
+ *
+ * @param viewModel Hilt 注入的 NavigationWithArgsViewModel
+ * @author Joker.X
  */
 @Composable
 internal fun NavigationWithArgsRoute(
@@ -25,7 +28,9 @@ internal fun NavigationWithArgsRoute(
 /**
  * 带参跳转示例界面
  *
+ * @param goodsId 传入的商品 ID
  * @param onBackClick 返回按钮回调
+ * @author Joker.X
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -43,6 +48,9 @@ internal fun NavigationWithArgsScreen(
 
 /**
  * 带参跳转内容视图
+ *
+ * @param goodsId 传入的商品 ID
+ * @author Joker.X
  */
 @Composable
 private fun NavigationWithArgsContent(goodsId: Long) {
@@ -51,6 +59,8 @@ private fun NavigationWithArgsContent(goodsId: Long) {
 
 /**
  * 带参跳转界面浅色主题预览
+ *
+ * @author Joker.X
  */
 @Preview(showBackground = true)
 @Composable
@@ -62,6 +72,8 @@ private fun NavigationWithArgsPreview() {
 
 /**
  * 带参跳转界面深色主题预览
+ *
+ * @author Joker.X
  */
 @Preview(showBackground = true)
 @Composable

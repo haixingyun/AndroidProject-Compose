@@ -14,6 +14,11 @@ import javax.inject.Inject
 
 /**
  * Core Demo ViewModel
+ *
+ * @param navigator 导航管理器
+ * @param userState 用户状态
+ * @param counterState 计数器状态
+ * @author Joker.X
  */
 @HiltViewModel
 class CoreDemoViewModel @Inject constructor(
@@ -28,9 +33,20 @@ class CoreDemoViewModel @Inject constructor(
     private val _cards = MutableStateFlow(DemoCardData.coreCards)
     val cards: StateFlow<List<DemoCardInfo>> = _cards.asStateFlow()
 
-    /** 全局计数器值 */
+    /**
+     * 全局计数器值
+     *
+     * @return 计数器状态流
+     * @author Joker.X
+     */
     val count: StateFlow<Int> = counterState.count
 
+    /**
+     * 处理卡片点击
+     *
+     * @param info 被点击的卡片信息
+     * @author Joker.X
+     */
     fun onCardClick(info: DemoCardInfo) {
         info.route?.let { navigate(it) }
     }

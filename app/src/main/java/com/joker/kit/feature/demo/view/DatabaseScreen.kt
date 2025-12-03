@@ -53,6 +53,7 @@ import java.util.Locale
  * 数据库示例路由
  *
  * @param viewModel Hilt 注入的 DatabaseViewModel
+ * @author Joker.X
  */
 @Composable
 internal fun DatabaseRoute(
@@ -90,6 +91,7 @@ internal fun DatabaseRoute(
  * @param onDeleteItem 删除指定记录
  * @param onClearAll 清空所有记录
  * @param onBackClick 返回按钮回调
+ * @author Joker.X
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -132,6 +134,7 @@ internal fun DatabaseScreen(
  * @param onAddClick 新增记录回调
  * @param onDeleteItem 删除记录回调
  * @param onClearAll 清空列表回调
+ * @author Joker.X
  */
 @Composable
 private fun DatabaseContent(
@@ -177,6 +180,7 @@ private fun DatabaseContent(
  * @param onAddClick 新增记录
  * @param onClearAll 清空全部
  * @param canClear 是否允许清空按钮启用
+ * @author Joker.X
  */
 @Composable
 private fun InputCard(
@@ -249,6 +253,7 @@ private fun InputCard(
  *
  * @param items Demo 数据列表
  * @param onDeleteItem 删除单条记录回调
+ * @author Joker.X
  */
 @Composable
 private fun DemoListCard(
@@ -298,6 +303,7 @@ private fun DemoListCard(
  *
  * @param item Demo 实体
  * @param onDeleteItem 删除该条记录回调
+ * @author Joker.X
  */
 @Composable
 private fun DemoListItem(
@@ -337,6 +343,8 @@ private fun DemoListItem(
 
 /**
  * 数据库界面浅色主题预览
+ *
+ * @author Joker.X
  */
 @Preview(showBackground = true)
 @Composable
@@ -352,6 +360,8 @@ private fun DatabasePreview() {
 
 /**
  * 数据库界面深色主题预览
+ *
+ * @author Joker.X
  */
 @Preview(showBackground = true)
 @Composable
@@ -367,6 +377,9 @@ private fun DatabasePreviewDark() {
 
 /**
  * 预览用 Demo 数据
+ *
+ * @return 示例数据列表
+ * @author Joker.X
  */
 private fun previewDemoItems() = listOf(
     DemoEntity(id = 1, title = "演示标题 A", description = "这是第一条记录"),

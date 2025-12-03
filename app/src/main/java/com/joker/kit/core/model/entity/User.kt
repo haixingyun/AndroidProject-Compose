@@ -1,5 +1,7 @@
 package com.joker.kit.core.model.entity
 
+import androidx.annotation.Keep
+
 import kotlinx.serialization.Serializable
 
 /**
@@ -18,6 +20,7 @@ import kotlinx.serialization.Serializable
  * @param updateTime 更新时间
  * @author Joker.X
  */
+@Keep
 @Serializable
 data class User(
 

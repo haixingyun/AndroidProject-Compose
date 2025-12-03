@@ -20,6 +20,9 @@ import com.joker.kit.feature.demo.viewmodel.NetworkDemoViewModel
 
 /**
  * Network Demo 路由
+ *
+ * @param viewModel Hilt 注入的 NetworkDemoViewModel
+ * @author Joker.X
  */
 @Composable
 internal fun NetworkDemoRoute(
@@ -41,6 +44,7 @@ internal fun NetworkDemoRoute(
  * @param uiState UI 状态
  * @param onBackClick 返回按钮回调
  * @param onRetry 重试回调
+ * @author Joker.X
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -66,6 +70,7 @@ internal fun NetworkDemoScreen(
  * Network Demo 内容视图
  *
  * @param data 商品数据
+ * @author Joker.X
  */
 @Composable
 private fun NetworkDemoContent(data: Goods) {
@@ -79,6 +84,8 @@ private fun NetworkDemoContent(data: Goods) {
 
 /**
  * Network Demo 界面浅色主题预览
+ *
+ * @author Joker.X
  */
 @Preview(showBackground = true)
 @Composable
@@ -90,6 +97,8 @@ private fun NetworkDemoPreview() {
 
 /**
  * Network Demo 界面深色主题预览
+ *
+ * @author Joker.X
  */
 @Preview(showBackground = true)
 @Composable
@@ -101,6 +110,9 @@ private fun NetworkDemoPreviewDark() {
 
 /**
  * 模拟商品数据
+ *
+ * @return 示例商品
+ * @author Joker.X
  */
 private fun mockGoods() = Goods(
     id = 1,

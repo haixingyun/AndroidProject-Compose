@@ -27,6 +27,8 @@ class UserInfoViewModel @Inject constructor(
 
     /**
      * 一键退出登录（本地清空）
+     *
+     * @author Joker.X
      */
     fun logout() {
         viewModelScope.launch {

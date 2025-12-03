@@ -29,6 +29,7 @@ import com.joker.kit.feature.main.viewmodel.CoreDemoViewModel
  * Core Demo 路由
  *
  * @param viewModel Core Demo ViewModel
+ * @author Joker.X
  */
 @Composable
 internal fun CoreDemoRoute(
@@ -49,6 +50,7 @@ internal fun CoreDemoRoute(
  * @param cards Demo 卡片列表
  * @param counter 全局计数器值，大于 0 时在列表顶部展示
  * @param onCardClick 卡片点击回调
+ * @author Joker.X
  */
 @Composable
 internal fun CoreDemoScreen(
@@ -81,6 +83,7 @@ internal fun CoreDemoScreen(
  * 主页计数器提示
  *
  * @param counter 当前计数器值
+ * @author Joker.X
  */
 @Composable
 private fun CounterBanner(counter: Int) {
@@ -94,6 +97,8 @@ private fun CounterBanner(counter: Int) {
 
 /**
  * Core Demo 浅色预览
+ *
+ * @author Joker.X
  */
 @Preview(showBackground = true)
 @Composable
@@ -107,6 +112,8 @@ private fun CoreDemoPreview() {
 
 /**
  * Core Demo 深色预览
+ *
+ * @author Joker.X
  */
 @Preview(showBackground = true)
 @Composable

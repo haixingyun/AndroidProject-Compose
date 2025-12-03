@@ -9,6 +9,9 @@ import com.joker.kit.navigation.routes.DemoRoutes
 
 /**
  * 数据库示例页面导航
+ *
+ * @param sharedTransitionScope 共享转场作用域
+ * @author Joker.X
  */
 @OptIn(ExperimentalSharedTransitionApi::class)
 fun NavGraphBuilder.databaseScreen(sharedTransitionScope: SharedTransitionScope) {

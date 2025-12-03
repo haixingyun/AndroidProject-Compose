@@ -30,6 +30,8 @@ class LoginViewModel @Inject constructor(
     /**
      * 模拟登录：构造假的 Auth/User，写入 UserState，演示路由拦截放行。
      * 真实项目中，这里会是网络请求，登录成功后会有 token 等信息返回。
+     *
+     * @author Joker.X
      */
     fun login() {
         viewModelScope.launch {
@@ -52,6 +54,8 @@ class LoginViewModel @Inject constructor(
 
     /**
      * 模拟退出登录，清空全局 UserState
+     *
+     * @author Joker.X
      */
     fun logout() {
         viewModelScope.launch {

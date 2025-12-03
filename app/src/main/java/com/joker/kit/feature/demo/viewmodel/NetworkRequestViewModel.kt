@@ -16,6 +16,11 @@ import javax.inject.Inject
 
 /**
  * 网络请求示例页 ViewModel
+ *
+ * @param navigator 导航管理器
+ * @param userState 用户状态
+ * @param goodsRepository 商品仓库
+ * @author Joker.X
  */
 @HiltViewModel
 class NetworkRequestViewModel @Inject constructor(
@@ -29,12 +34,17 @@ class NetworkRequestViewModel @Inject constructor(
 
     /**
      * 商品信息
+     *
+     * @return 商品信息状态流
+     * @author Joker.X
      */
     private val _goods = MutableStateFlow<Goods?>(null)
     val goods: StateFlow<Goods?> = _goods.asStateFlow()
 
     /**
      * 发起商品信息请求，示例中固定传 id = 1
+     *
+     * @author Joker.X
      */
     fun onRequestClick() {
         ResultHandler.handleResultWithData(

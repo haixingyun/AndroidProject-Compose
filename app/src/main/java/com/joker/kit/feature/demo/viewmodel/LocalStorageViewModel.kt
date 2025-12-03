@@ -21,6 +21,7 @@ import kotlinx.coroutines.launch
  * @param navigator 导航管理器
  * @param userState 用户状态管理
  * @param userInfoStoreRepository 用户信息本地存储仓库
+ * @author Joker.X
  */
 @HiltViewModel
 class LocalStorageViewModel @Inject constructor(
@@ -53,6 +54,7 @@ class LocalStorageViewModel @Inject constructor(
      * 用户 id 文本更新
      *
      * @param value 输入的 id 字符串
+     * @author Joker.X
      */
     fun onUserIdChange(value: String) {
         _userId.value = value
@@ -62,6 +64,7 @@ class LocalStorageViewModel @Inject constructor(
      * 用户昵称输入更新
      *
      * @param value 昵称文本
+     * @author Joker.X
      */
     fun onNickNameChange(value: String) {
         _nickName.value = value
@@ -71,6 +74,7 @@ class LocalStorageViewModel @Inject constructor(
      * 头像链接输入更新
      *
      * @param value 头像 URL
+     * @author Joker.X
      */
     fun onAvatarChange(value: String) {
         _avatar.value = value
@@ -78,6 +82,8 @@ class LocalStorageViewModel @Inject constructor(
 
     /**
      * 保存用户信息到本地
+     *
+     * @author Joker.X
      */
     fun saveUser() {
         viewModelScope.launch {
@@ -95,6 +101,8 @@ class LocalStorageViewModel @Inject constructor(
 
     /**
      * 清除本地用户信息
+     *
+     * @author Joker.X
      */
     fun clearUser() {
         viewModelScope.launch {
@@ -108,6 +116,8 @@ class LocalStorageViewModel @Inject constructor(
 
     /**
      * 重新读取用户信息
+     *
+     * @author Joker.X
      */
     fun loadUser() {
         viewModelScope.launch {

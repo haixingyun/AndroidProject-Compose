@@ -74,6 +74,11 @@ internal fun MainScreen(
 
 /**
  * 主页面内容视图，包含底部导航和横向 Pager
+ *
+ * @param uiState UI 状态
+ * @param onTabSelected Tab 切换回调
+ * @param navController 导航控制器
+ * @author Joker.X
  */
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
@@ -126,6 +131,11 @@ private fun MainScreenContent(
 
 /**
  * 自定义纯文字底部导航栏
+ *
+ * @param tabs 底部栏 Tab 列表
+ * @param currentTab 当前选中 Tab
+ * @param onTabSelected Tab 选择回调
+ * @author Joker.X
  */
 @Composable
 private fun MainBottomBar(

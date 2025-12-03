@@ -37,6 +37,7 @@ import com.joker.kit.feature.demo.viewmodel.StateManagementViewModel
  * 状态管理示例路由
  *
  * @param viewModel Hilt 注入的 StateManagementViewModel
+ * @author Joker.X
  */
 @Composable
 internal fun StateManagementRoute(
@@ -62,6 +63,7 @@ internal fun StateManagementRoute(
  * @param onDecrease -1 回调
  * @param onReset 重置回调
  * @param onBackClick 返回按钮回调
+ * @author Joker.X
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -92,6 +94,7 @@ internal fun StateManagementScreen(
  * @param onIncrease 递增回调
  * @param onDecrease 递减回调
  * @param onReset 重置回调
+ * @author Joker.X
  */
 @Composable
 private fun StateManagementContent(
@@ -116,6 +119,11 @@ private fun StateManagementContent(
     }
 }
 
+/**
+ * 状态管理介绍卡片
+ *
+ * @author Joker.X
+ */
 @Composable
 private fun IntroCard() {
     Card(
@@ -147,6 +155,7 @@ private fun IntroCard() {
  * @param onIncrease 递增回调
  * @param onDecrease 递减回调
  * @param onReset 重置回调
+ * @author Joker.X
  */
 @Composable
 private fun CounterCard(
@@ -203,6 +212,8 @@ private fun CounterCard(
 
 /**
  * 状态管理界面浅色主题预览
+ *
+ * @author Joker.X
  */
 @Preview(showBackground = true)
 @Composable
@@ -214,6 +225,8 @@ private fun StateManagementPreview() {
 
 /**
  * 状态管理界面深色主题预览
+ *
+ * @author Joker.X
  */
 @Preview(showBackground = true)
 @Composable

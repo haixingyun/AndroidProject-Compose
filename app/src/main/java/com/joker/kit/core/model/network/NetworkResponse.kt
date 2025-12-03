@@ -1,5 +1,7 @@
 package com.joker.kit.core.model.network
 
+import androidx.annotation.Keep
+
 import kotlinx.serialization.Serializable
 
 /**
@@ -11,6 +13,7 @@ import kotlinx.serialization.Serializable
  * @param message 出错的提示信息
  * @author Joker.X
  */
+@Keep
 @Serializable
 data class NetworkResponse<T>(
     /**

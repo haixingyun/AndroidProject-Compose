@@ -9,6 +9,11 @@ import com.joker.kit.navigation.NavigationResultKey
 
 /**
  * 监听返回结果扩展
+ *
+ * @param key 结果键，定义序列化/反序列化规则
+ * @param onResult 结果回调
+ * @param T 结果数据类型
+ * @author Joker.X
  */
 @Composable
 fun <T> NavController.observeResult(
